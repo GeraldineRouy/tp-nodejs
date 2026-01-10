@@ -1,0 +1,34 @@
+### POST new artist
+POST http://localhost:3000/api/artists
+Content-Type: application/json
+
+{
+  "name": "Chinchilla Chaos",
+  "genre": "Fluffy Metal",
+  "country": "France",
+  "description": "Un groupe de chinchillas qui font du metal.",
+  "imageUrl": "https://example.com/chinchilla.jpg"
+}
+
+### GET artists
+GET http://localhost:3000/api/artists
+
+
+### GET artist by id
+GET http://localhost:3000/api/artists/695b933ab2c46df2b16c5883
+
+
+### UPDATE artist by id
+PUT http://localhost:3000/api/artists/693841e77cb4d155374dc2c5
+Content-Type: application/json
+
+{
+  "name": "Poop is everywhere",
+  "genre": "Fluffy Doom",
+  "country": "Chinchiland",
+  "description": "Ils sont de retour, encore plus sombres.",
+  "imageUrl": "https://example.com/chinchilla-doom.jpg"
+}
+
+### DELETE artist by id
+DELETE http://localhost:3000/api/artists/6938452861032c2dbe45bbbd
