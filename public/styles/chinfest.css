@@ -1,0 +1,222 @@
+body {
+    margin: 0;
+    background-color: #111;
+    color: #eee;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.navbar {
+    background-color: #1a1a1a;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(255, 0, 0, 0.3);
+}
+
+.logo {
+    max-width: 150px;
+}
+
+.footer {
+    background-color: #1a1a1a;
+    color: #777;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 4rem;
+    font-size: 0.9rem;
+    border-top: 1px solid #333;
+}
+
+#fest-title {
+    font-size: 1.8rem;
+    color: #f5c518;
+    text-shadow: 0 0 10px #ff0000;
+    margin: 0;
+}
+
+.homepage-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+    font-family: 'Orbitron', sans-serif;
+    color: #eee;
+    background-color: #111;
+}
+
+.title {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.hero-image {
+    max-width: 70%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.4);
+}
+
+.toggle-btn {
+    background-color: #b30000;
+    color: white;
+    border: none;
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.toggle-btn:hover {
+    background-color: #ff1a1a;
+}
+
+.description {
+    margin-top: 2rem;
+}
+
+.line {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    opacity: 0;
+    transform: translateY(10px);
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: #f5c518;
+    text-shadow: 0 0 8px #ff0000;
+    margin-bottom: 2rem;
+}
+
+#artists-section {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 2rem;
+}
+
+.artist-card {
+    background-color: #1a1a1a;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.3);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem;
+    padding: 1rem;
+    transition: transform 0.3s ease;
+    position: relative;
+}
+
+.artist-card:hover {
+    transform: scale(1.02);
+}
+
+.artist-img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+}
+
+.artist-info {
+    text-align: center;
+}
+
+.artist-name {
+    font-size: 1.5rem;
+    color: #f5c518;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 0 5px #ff0000;
+}
+
+.artist-desc {
+    color: #ccc;
+    font-size: 1rem;
+    line-height: 1.4;
+}
+
+.delete-btn {
+    background-color: #550000;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 0.5rem 1rem;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 0 8px rgba(255, 0, 0, 0.4);
+}
+
+.delete-btn:hover {
+    background-color: #aa0000;
+    transform: scale(1.05);
+    box-shadow: 0 0 12px rgba(255, 50, 50, 0.7);
+}
+
+.artist-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 500px;
+    margin: 3rem auto;
+    padding: 2rem;
+    background-color: #1a1a1a;
+    border-radius: 8px;
+    box-shadow: 0 0 15px #00ffff;
+}
+
+.input-field,
+.textarea-field {
+    background-color: #222;
+    border: 1px solid #444;
+    border-radius: 4px;
+    padding: 0.8rem;
+    font-size: 1rem;
+    color: #eee;
+}
+
+.input-field::placeholder,
+.textarea-field::placeholder {
+    color: #888;
+}
+
+.submit-btn {
+    background-color: #b30000;
+    color: white;
+    padding: 0.8rem 1.2rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #ff1a1a;
+}
+
+.submit-btn:disabled {
+    background-color: #555;
+    cursor: not-allowed;
+}
+
+

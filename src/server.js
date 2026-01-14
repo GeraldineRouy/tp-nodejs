@@ -1,26 +1,24 @@
-const express = require('express');
-const cors = require('cors');
+// src/server.js
 const dotenv = require('dotenv');
 const connectDB = require('./config/db');
-const artistRoutes = require('./routes/artistRoutes');
+const app = require('./app'); // ⬅️ on récupère l'app qu'on vient de factoriser
 
 dotenv.config();
 
-const app = express();
+const PORT = process.env.PORT || 3000;
 
-app.use(cors());
-app.use(express.json());
+async function startServer() {
+    try {
+        await connectDB();
+        console.log('✅ Connected to MongoDB');
 
-app.get('/api/health', (req, res) => {
-    res.json({status: 'OK', message: 'ChinFest API is alive 🔥'});
-});
+        app.listen(PORT, () => {
+            console.log(`🚀 Server is running on http://localhost:${PORT}`);
+        });
+    } catch (err) {
+        console.error('❌ Failed to start server:', err);
+        process.exit(1);
+    }
+}
 
-app.use('/api/artists', artistRoutes);
-
-const port = process.env.PORT || 3000;
-
-connectDB().then(() => {
-    app.listen(port, () => {
-        console.log(`🚀 Server is running on http://localhost:${port}`);
-    });
-});
+startServer();

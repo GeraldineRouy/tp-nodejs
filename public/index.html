@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chinchilla Chaos Fest Editor</title>
+    <link rel="stylesheet" href="/styles/chinfest.css">
+</head>
+
+<body>
+<header class="navbar">
+    <img src="/images/fest-logo.png" alt="Chinchilla Chaos Fest Logo" class="logo">
+    <h1 id="fest-title">Chinchilla Chaos Fest Editor</h1>
+    <p class="description">Line-up</p>
+</header>
+
+<main>
+
+    <section class="homepage-container">
+        <h2 class="title">Welcome in fluffy hell !</h2>
+
+        <img src="/images/fest-hero.png" alt="Festival Hero" class="hero-image">
+
+        <div class="description">
+            <p class="line" >Get ready for the most absurdly epic metal festival of the year.</p>
+            <p class="line" >At the heart of the chaos: chinchillas — cute, fierce, and louder than ever.</p>
+            <p class="line" >From black metal screams to industrial roars, our lineup of fictional fur-fueled bands will melt your face and warm your heart.</p>
+            <p class="line" >🐾 Join the rebellion. Worship the fluff. Embrace the noise.</p>
+            <p class="line" >Let the chaos begin.</p>
+        </div>
+
+    </section>
+
+    <section id="add-artist-section">
+        <h2 class="title">Artist Form</h2>
+        <div class="form-header">
+            <h3>Enter new artist information below</h3>
+        </div>
+
+        <form id="artist-form">
+            <div class="input-field">
+                <label for="artist-name">Artist Name *</label>
+                <input placeholder="Name" type="text" id="artist-name" name="artist-name" required>
+            </div>
+            <div class="input-field">
+                <label for="artist-genre">Genre</label>
+                <input placeholder="Genre" type="text" id="artist-genre" name="artist-genre">
+            </div>
+            <div class="input-field">
+                <label for="artist-country">Country</label>
+                <input placeholder="Country" type="text" id="artist-country" name="artist-country">
+            </div>
+            <div class="input-field">
+                <label for="artist-image-url">Image (URL)</label>
+                <input placeholder="Image URL" type="text" id="artist-image-url" name="artist-image-url">
+            </div>
+            <div class="textarea-field">
+                <label for="artist-description">Description</label>
+                <textarea placeholder="Description" id="artist-description" name="artist-description" rows="3"></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn">Submit</button>
+        </form>
+        <p id="artist-form-message"></p>
+
+    </section>
+
+    <section>
+        <h2 class="title">Artists</h2>
+        <div id="artists-section">
+            <p id="artist-suppression-message"></p>
+
+
+        </div>
+    </section>
+
+</main>
+
+<footer class="footer">
+    <p>&copy; 2026 Chinchilla Chaos Fest — Fluff meets Fury.</p>
+</footer>
+
+<script src="./main.js"></script>
+</body>
+
+
+</html>
